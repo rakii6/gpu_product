@@ -1,0 +1,65 @@
+.gpu-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.1);
+    padding: 1.25rem;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(99, 102, 241, 0.1);
+  }
+  
+  .gpu-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.15);
+  }
+  
+  .gpu-card.available {
+    background: linear-gradient(to bottom right, 
+      rgba(52, 211, 153, 0.05),
+      rgba(52, 211, 153, 0.1)
+    );
+  }
+  
+  .gpu-card.unavailable {
+    background: linear-gradient(to bottom right, 
+      rgba(251, 113, 133, 0.05),
+      rgba(251, 113, 133, 0.1)
+    );
+  }
+  
+  .gpu-card .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .gpu-card .name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+  }
+  
+  .gpu-card .status {
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+  }
+  
+  .gpu-card .status.available {
+    color: var(--success);
+    background-color: rgba(52, 211, 153, 0.1);
+  }
+  
+  .gpu-card .status.unavailable {
+    color: var(--error);
+    background-color: rgba(251, 113, 133, 0.1);
+  }
+  
+  .gpu-card .price {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-top: 0.75rem;
+  }
