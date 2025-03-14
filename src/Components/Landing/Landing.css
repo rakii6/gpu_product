@@ -1,0 +1,65 @@
+:root {
+    --primary-bg: #f8f9ff;
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --accent-primary: #6366f1;
+    --accent-secondary: #818cf8;
+    --card-bg: #ffffff;
+    --success: #34d399;
+    --error: #fb7185;
+    --gradient-start: #6366f1;
+    --gradient-end: #818cf8;
+  }
+  
+  .vast-ai-landing-page {
+    background-color: var(--primary-bg);
+    background-image: linear-gradient(
+      135deg,
+      rgba(99, 102, 241, 0.05) 0%,
+      rgba(129, 140, 248, 0.05) 100%
+    );
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 3rem;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .gpu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .sign-up-button-wrapper {
+    text-align: center;
+    margin-top: 3rem;
+  }
