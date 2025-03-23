@@ -10,7 +10,7 @@ import json
 
 app = FastAPI()
 
-origins = ["http://localhost:5173","https://localhost:5173", "https://indiegpu.com"]
+origins = ["http://localhost:5173","https://localhost:5173", "https://indiegpu.com","https://www.indiegpu.com"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
