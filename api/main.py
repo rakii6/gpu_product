@@ -10,9 +10,7 @@ import json
 
 app = FastAPI()
 
-origins = ["http://localhost:5173","https://localhost:5173",
-    "https://yourdomain.vercel.app",  # Add your Vercel frontend domain
-    "https://indiegpu.com"]
+origins = ["http://localhost:5173","https://localhost:5173", "https://indiegpu.com"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -22,10 +20,6 @@ app.add_middleware(
 )
 
 
-
-cred = credentials.Certificate("firebase_cred.json")
-firebase_admin.initialize_app(cred)
-db = firestore.client()
 
 
 def initialize_firebase():
