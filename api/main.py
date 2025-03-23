@@ -23,15 +23,14 @@ app.add_middleware(
 
 
 def initialize_firebase():
-    if os.environ.get("VERCEL"):
-        firebase_credentials= os.environ.get("FIREBASE_CREDENTIALS")
-        if firebase_credentials:
-            cred_dict = json.loads(firebase_credentials)
-            cred = credentials.Certificate(cred_dict)
-        else:
-            raise ValueError("FIREBASE_CREDENTIALS environment variable is not set")
+    if os.environ.get("FIREBASE_CREDENTIALS"):
+        firebase_credentials = os.environ.get("FIREBASE_CREDENTIALS")
+        cred_dict = json.loads(firebase_credentials)
+        cred = credentials.Certificate(cred_dict)
     else:
-        cred = credentials.Certificate("firebase_cred.json")
+        # Local development - adjust path if needed
+        cred_path = "api/firebase_cred.json" if os.path.exists("api/firebase_cred.json") else "firebase_cred.json"
+        cred = credentials.Certificate(cred_path)
     
     try:
         firebase_admin.initialize_app(cred)
