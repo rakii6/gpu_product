@@ -545,6 +545,15 @@
   margin: 20px 0;
 }
 
+.footer-links a {
+  color: var(--text-light);
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--neon-cyan);
+}
+
 .social-links {
   display: flex;
   justify-content: center;

@@ -390,6 +390,7 @@ const IndieGPULanding = () => {
               <a href="#twitter"><i className="fab fa-twitter"></i></a>
               <a href="#discord"><i className="fab fa-discord"></i></a>
             </div> */}
+            <a href="/privacy">Privacy Policy</a>
             <p className="copyright">© 2025 IndieGPU - All rights reserved</p>
           </div>
         </div>
